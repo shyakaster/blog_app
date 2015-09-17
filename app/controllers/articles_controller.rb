@@ -10,8 +10,8 @@ class ArticlesController < ApplicationController
       flash[:success]="Article has been created"
       redirect_to articles_path
     else
-      flash[:failure]="Sorry article not saved"
-      redirect_to articles_path
+      flash[:danger]="Sorry article not saved"
+      render :new
     end
   end
   private
