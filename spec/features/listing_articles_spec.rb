@@ -13,6 +13,7 @@ RSpec.feature "Creating articles" do
     expect(page).to have_content(@article2.body)
     expect(page).to have_link(@article1.title)
     expect(page).to have_link(@article2.title)
+    expect(page).not_to have_link("New article")
 
   end
 
