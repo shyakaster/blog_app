@@ -5,7 +5,7 @@ class ArticlesController < ApplicationController
     @articles=Article.all
   end
   def show
-
+  @comment=@article.comments.build
   end
   def edit
     if @article.user != current_user
